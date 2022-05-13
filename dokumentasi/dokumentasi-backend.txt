@@ -1,0 +1,20 @@
+backend = nodemon, express, nodejs, mysql, cors, body-parser
+
+--- koneksi github ---
+1. new repo digithub
+2. clone repo ke lokal > git remote add origin https://github.com/limmi26/nime-art.git
+3. mengubah master menjadi main > git branch -m main
+4. membuka folder > code .
+5. menyimpan all folder dan file yg sudah diubah > git add .
+6. memberi label > git commit -m "perubahan 1"
+7. upload/push kegithub > git push -u origin main
+
+--- instalasi ---
+1. masuk folder <backend> dan buka melalui gitbash
+2. membuat package.json > npm init -y
+3. install nodemon > npm i -g nodemon
+4. install library untuk backend > npm i express mysql body-parser cors dotenv
+5. Generate gitignore file lewat gitignore generator > ctrl+shift+p > node+dotenv
+6. buat file app.js > touch app.js
+7. install Express, Cors, bodyParser, Port dan koneksi Port serta Routing dalam app.js > npm i express body-parser mysql cors
+

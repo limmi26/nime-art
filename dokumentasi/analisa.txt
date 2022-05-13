@@ -1,0 +1,50 @@
+--- database ---
+1. Nyalakan XAMPP
+2. Masuk ke dalam PHPMyAdmin
+3. Buat database: animezxx_db
+4. Atur Privileges untuk membuat User 
+5. Buat user account baru
+6. Buat nama user dan password
+7. Masuk ke database lalu membuat tabel sesuai keperluan
+
+--- table ---
+user dan anime
+
+--- table user ---
+nama tabel : user
+query	   : CREATE TABLE user(id_user int , username varchar(100), email varchar(100), password varchar(100), nama varchar(100));
+    - id_user INT NOT NULL AUTO_INCREMENT Primary Key
+    - username VARCHAR(100) NOT NULL
+    - email VARCHAR(100) NOT NULL
+    - password VARCHAR(100) NOT NULL
+    - nama VARCHAR(100)
+
+--- table anime ---
+nama tabel : anime
+query	   : CREATE TABLE anime(id_anime int, judul varchar(100), rating varchar(100), episode varchar(100), status varchar(100), premiered varchar(100), studio varchar(100), genre varchar(100), created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,updated_at DATETIME DEFAULT CURRENT_TIMESTAMP)
+    - id_anime INT NOT NULL AUTO_INCREMENT Primary Key
+    - judul VARCHAR(100) NOT NULL
+    - rating VARCHAR(100) NOT NULL
+    - episode VARCHAR(100) NOT NULL
+    - status VARCHAR(100) 
+    - premiered VARCHAR(100)
+    - studio VARCHAR(100)
+    - genre VARCHAR(100)
+    - created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    - updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+
+--- user case ---
+    - pendaftaran/profile
+    - login
+    - register
+    - nonton, 3rd api
+    - searching
+    - filter anime
+
+--- user story ---
+register:   username: mich26 > halaman profil > no.telp
+            email: > google
+            pass: > upercase,uniqcase,lowercase
+
+login:  username/email, pass
+        list anime > pilih anime > nonton anime
