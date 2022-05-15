@@ -1,31 +1,42 @@
-'use strict';
+'use strict'
 
-/**
+/*
+ *express init
+ * setting port
+ * cors init
  * dotenv init
- * Express Init
- * Setting Port
- * Cors Init
- * Dotenv Init
- * Body Parser / Express Parsing (form parsing)
- */
+ * body parser 
+*/
 
-// Initialization dotenv
-require('dotenv').config();
+// initialization dotenv
+// require('dotenv').config();
 
-// Initialization Libraries
+// initialization libraries
 const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const {router} = require('./router/router');
 
-// port
+// initialization PORT
 const port = process.env.PORT || 3000;
 
-// Cors Option Origin
+// cors option origin
 let originOptionCors = {
-  origin: `http://localhost:${port}`,
-};
+    origin: `http://localhost${port}`
+}
 
-// Port Connection
-app.listen(port, () => `Port Terkoneksi on ${port}`)
+app.use(cors(originOptionCors));
+
+// parse requests of content-type - application/json
+// app.use(express.json());
+
+// parse requests of content-type - application/x-www-form-urlencoded
+// app.use(express.urlencoded({ extended: true }));
+
+// routing
+app.use('/', router);
+
+// port connection
+app.listen(port, () => `port connection on ${port}`);
+

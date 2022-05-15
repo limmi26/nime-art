@@ -8,16 +8,16 @@ const express = require('express');
 const router = express.Router();
 
 // controller
-// const { Controller } = require('../controller/Contoller');
+const { Controller } = require('../controller/Controller');
 
 // anime controller
-// const { animeRouter } = require('./AnimeRouter');
+const { AnimeRouter } = require('./AnimeRouter');
 
 // endpoint : home
-// router.get('/', Controller.Homepage)
+router.get('/', Controller.Homepage);
 
 // endpoint : anime
-// router.use('/anime', animeRouter);
+router.use('/anime', AnimeRouter);
 
 
 // module export

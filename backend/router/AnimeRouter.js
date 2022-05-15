@@ -11,13 +11,13 @@ const express = require('express');
 const AnimeRouter = express.Router();
 
 // controller
-// const { AnimeController } = require('../controller/AnimeController');
+const { AnimeController } = require('../controller/AnimeController');
 
 // endpoint : all anime
-// bookRouter.get('/', AnimeController.FindAllAnime);
+AnimeRouter.get('/', AnimeController.FindAllAnime);
 
-// endpoint : book by id
-// bookRouter.get('/:id', AnimeController.FindAnimeById);
+// endpoint : anime by id
+// AnimeRouter.get('/:id', AnimeController.FindAnimeById);
 
 // module export
 module.exports = { AnimeRouter };

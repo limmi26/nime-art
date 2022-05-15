@@ -14,10 +14,10 @@ user dan anime
 nama tabel : user
 query	   : CREATE TABLE user(id_user int , username varchar(100), email varchar(100), password varchar(100), nama varchar(100));
     - id_user INT NOT NULL AUTO_INCREMENT Primary Key
+    - nama VARCHAR(100)
     - username VARCHAR(100) NOT NULL
     - email VARCHAR(100) NOT NULL
     - password VARCHAR(100) NOT NULL
-    - nama VARCHAR(100)
 
 --- table anime ---
 nama tabel : anime
@@ -25,7 +25,7 @@ query	   : CREATE TABLE anime(id_anime int, judul varchar(100), rating varchar(1
     - id_anime INT NOT NULL AUTO_INCREMENT Primary Key
     - judul VARCHAR(100) NOT NULL
     - rating VARCHAR(100) NOT NULL
-    - episode VARCHAR(100) NOT NULL
+    - episode INT NOT NULL
     - status VARCHAR(100) 
     - premiered VARCHAR(100)
     - studio VARCHAR(100)
